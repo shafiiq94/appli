@@ -1,0 +1,76 @@
+
+
+<ion-view title="CGPA Calculator" id="page9">
+  <ion-content padding="true" class="has-header">
+    <form id="updateDetails-form4" class="list">
+    
+ <div class="button-bar">
+    <a ui-sref="tabsController.gPACalculator" id="gpa-button8" class="button button-positive">Calculate GPA</a>
+    <a ui-sref="tabsController.expectedGrade" id="cgpa-button" class="button button-assertive"class="button button-assertive">Calculate expected GPA</a>
+    <a ui-sref="tabsController.cgpaCalculator" id="cgpa-button9"class="button button-energized">Calculate CGPA</a>
+ </div> 
+
+<div>
+      <div class="row header">
+          <div class="col">Semeseter</div>
+          <div class="col">CGPA</div>
+          
+         
+      </div>
+
+      <div class="item row">
+
+       <div class="col">
+           <label class="item-input insert" id="semname">
+             <textarea placeholder="Course Name" ng-model="semName"></textarea>
+           </label>
+         </div>
+       
+
+      <div class="col">
+           <label class="item-input insert" id="curppa">
+             <textarea placeholder="gpa" ng-model="curGpa"></textarea>
+           </label>
+         </div>
+           
+      </div>
+
+      <div ng-repeat="x in gpalist" class="item row">
+             <div class="col">
+                       <label class="item-input insert" id="semname">
+                         {{x.a}}
+                       </label>
+              </div>
+
+              <div class="col">
+                       <label class="item-input insert" id="curppa">
+                         {{x.b}}
+                       </label>
+              </div>
+
+              
+      <a id="delcourse_button" class="button button-assertive" ng-click="removerow($index)">Remove</a>
+      </div>
+
+
+</div>
+
+
+
+          <div class="button-bar">
+             <a id="addcourse_button" class="button button-royal" ng-click="addlist(semName, curGpa)">Add New GPA</a>
+             <a id="calcourse_button" class="button button-positive " ng-click="gpacalc()">Calculate</a>
+          </div> 
+
+          {{cgpa}}
+
+
+
+        
+    </form>
+  </ion-content>
+</ion-view>
+
+
+
+         

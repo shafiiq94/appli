@@ -1,0 +1,56 @@
+<ion-view title="My Task" id="page4">
+  <ion-content padding="true" class="has-header">
+
+<div class="button-bar">
+   <a class="button button-assertive">Display Task</a>
+   <a class="button button-positive">Add New Task</a>
+</div> 
+
+ 
+<div>
+        <div class="row header">
+          <div class="col">No</div>
+          <div class="col">Task Title</div>
+          <div class="col">Task Description</div>
+          <div class="col">Deadlines</div>
+          <div class="col">Activity</div>
+        </div>
+
+
+        <div class="row" ng-repeat="p in listall">
+          <div class="col">{{p.id}}</div>
+          <div class="col">{{p.task_title}}</div>
+          <div class="col">{{p.task_details}}</div>
+          <div class="col">{{p.date}}</div>
+          <div class="col"><button class="button" ng-click="ctrl.add($index)">Delete</button></div>
+        </div>
+
+ </div>
+
+
+<form id="studentDetailsPage-form2" class="list">
+      <div id="studentDetailsPage-markdown2" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Student ID</p>
+      </div>
+      <label class="item item-input" id="studentDetailsPage-textarea1">
+        <span class="input-label"></span><textarea placeholder=""></textarea></label>
+      <div id="studentDetailsPage-markdown3" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Task Title</p>
+      </div>
+      <label class="item item-input" id="studentDetailsPage-textarea2">
+        <span class="input-label"></span><textarea placeholder=""></textarea></label>
+      <div id="studentDetailsPage-markdown4" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Task Description</p>
+      </div>
+ 
+
+      <label class="item item-input" id="studentDetailsPage-textarea4">
+        <span class="input-label"></span><textarea placeholder=""></textarea></label>
+    </form>
+    <a ui-sref="tabsController.updateDetails" id="studentDetailsPage-button4" class="button button-positive  button-block">Submit</a>
+    <a ui-sref="tabsController.dashboard" id="studentDetailsPage-button6" class="button button-positive  button-block">Back</a>
+
+
+ </ion-content>
+</ion-view>
+

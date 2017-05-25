@@ -1,0 +1,37 @@
+<ion-view title="Student Details Page" id="page2">
+  <ion-content padding="true" class="has-header">
+    <form id="studentDetailsPage-form2" class="list">
+      <div id="studentDetailsPage-markdown2" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Student ID</p>
+      </div>
+      <label class="item item-input" id="studentDetailsPage-textarea1">
+        <span class="input-label">{{data.no_matric}}</span></label>
+      <div id="studentDetailsPage-markdown3" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Student Name</p>
+      </div>
+      <label class="item item-input" id="studentDetailsPage-textarea2">
+        <span class="input-label">{{data.stud_name}}</span></label>
+      <div id="studentDetailsPage-markdown4" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Course Code</p>
+      </div>
+      <label class="item item-input" id="studentDetailsPage-textarea3">
+        <span class="input-label">{{data.course_code}}</span></label>
+      <div id="studentDetailsPage-markdown5" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Telephone No</p>
+      </div>
+      <label class="item item-input" id="studentDetailsPage-textarea3">
+        <span class="input-label">{{data.tel_no}}</span></label>
+      <div id="studentDetailsPage-markdown5" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">GPA</p>
+      </div>
+
+      <label class="item item-input" id="studentDetailsPage-textarea4">
+        <span class="input-label">{{data.gpa}}</span></label>
+    </form>
+
+
+    <a ui-sref="tabsController.updateDetails" id="studentDetailsPage-button4" class="button button-positive  button-block">Update Details</a>
+    <a ui-sref="tabsController.dashboard" id="studentDetailsPage-button6" class="button button-positive  button-block">Back</a>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,166 @@
+
+
+<ion-view title="GPA Calculator" id="page8">
+  <ion-content padding="true" class="has-header">
+    <form id="updateDetails-form4" class="list">
+  	
+    <div class="button-bar">
+       <a ui-sref="tabsController.gPACalculator" id="gpa-button8" class="button button-positive">Calculate GPA</a>
+       <a ui-sref="tabsController.expectedGrade" id="cgpa-button" class="button button-assertive"class="button button-assertive">Calculate expected GPA</a>
+       <a ui-sref="tabsController.cgpaCalculator" id="cgpa-button9"class="button button-energized">Calculate CGPA</a>
+    </div> 
+
+<div>
+      <div class="row header">
+          <div class="col">Course Name</div>
+          <div class="col">Credit Hour</div>
+          <div class="col">Grade</div>
+         
+      </div>
+
+      <div class="item row">
+
+       <div class="col">
+           <label class="item-input insert" id="cname">
+             <textarea placeholder="Course Name" ng-model="cName"></textarea>
+           </label>
+         </div>
+       
+
+       <div class="col">
+         <div class="item-input-inset" id="cr1">
+         <select ng-model="cCredit">
+             <option>1.0</option>
+             <option>2.0</option>
+             <option>3.0</option>
+             <option>4.0</option>
+             <option>5.0</option>
+             <option>6.0</option>
+           </select>
+         </div>
+      </div>
+
+       <div class="col">
+         <div class="item-input-inset" id="gr1">
+            <select ng-model="cGrade">
+             <option>A+</option>
+             <option>A</option>
+             <option>A-</option>
+             <option>B+</option>
+             <option>B</option>
+             <option>B-</option>
+             <option>C+</option>
+             <option>C</option>
+             <option>C-</option>
+             <option>D</option>
+             <option>E</option>
+             <option>F</option>
+           </select>
+         </div>
+       </div>
+           
+       
+      </div>
+
+      <div ng-repeat="x in gpalist" class="item row">
+             <div class="col">
+                       <label class="item-input insert" id="cname">
+                         {{x.a}}
+                       </label>
+              </div>
+
+              <div class="col">
+                       <label class="item-input insert" id="cname">
+                         {{x.b}}
+                       </label>
+              </div>
+
+              <div class="col">
+                       <label class="item-input insert" id="cname">
+                         {{x.c}}
+                       </label>
+              </div>
+      <a id="delcourse_button" class="button button-assertive" ng-click="removerow($index)">Remove</a>
+      </div>
+
+
+</div>
+
+
+
+          <div class="button-bar">
+             <a id="addcourse_button" class="button button-royal" ng-click="addlist(cName, cCredit, cGrade)">Add New Course</a>
+             <a id="calcourse_button" class="button button-positive " ng-click="gpacalc()">Calculate</a>
+          </div> 
+
+
+
+
+
+          {{gpa}}
+
+
+
+        
+    </form>
+  </ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="col">
+              <label class="item-input insert" id="cname">
+                <span class="input-label"></span><textarea placeholder="Course Name"></textarea>
+              </label>
+            </div>
+          
+
+          <div class="col">
+            <div class="item-input-inset" id="cr1">
+            <select>
+                <option>1.0</option>
+                <option selected>2.0</option>
+                <option>3.0</option>
+                <option>4.0</option>
+                <option>5.0</option>
+                <option>6.0</option>
+              </select>
+            </div>
+         </div>
+
+          <div class="col">
+            <div class="item-input-inset" id="gr1">
+               <select>
+                <option>A+</option>
+                <option>A</option>
+                <option>A-</option>
+                <option selected>B+</option>
+                <option>B</option>
+                <option>B-</option>
+                <option>C+</option>
+                <option>C</option>
+                <option>C-</option>
+                <option>D</option>
+                <option>E</option>
+                <option>F</option>
+              </select>
+            </div>
+          </div>
+              
+          <div class="col">
+            <div class="item-input-inset">
+             <div class="button-bar">
+                          <a  id="deletecourse_button" class="button button-assertive ">Delete</a>
+                       </div> 
+
+            </div>
+          </div>
